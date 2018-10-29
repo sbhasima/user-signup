@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+{% block content   %}
+
+<form action = "/welcome" method="post">
+    <h1>Signup</h1>
+    <table>
+            <tr>
+                <td> <label for="username" > Username</label></td>
+                <td> <input type="text" name="username" id="username" value="{{username}}"/>
+                    <span class="error" > {{username_error}}</span>
+                </td>
+                
+            </tr>
+            <tr>
+                <td> <label for="password" > Password</label></td>
+                <td> <input type="password" name="password" id="password" value = "{{password}}"/>
+                    <span class="error" > {{password_error}}</span>
+                </td>
+                
+            </tr>
+            <tr>
+                <td> <label for="vrify_password" > Verify Password</label></td>
+                <td><input type="password" name="verify_password" id="verify_password" value = "{{verify_password}}"/>
+                    <span class="error" > {{verify_error}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email" > Email (Optionnal)</label></td>
+                <td><input type="text" name="email" id="email" value="{{email}}"/>
+                    <span class="error"> {{email_error}}</span>
+                </td>
+            </tr>
+                <td><input type="submit"/></td>
+    </table>
+    </form>
+
+
+
+{% endblock  %}
